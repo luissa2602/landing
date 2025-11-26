@@ -1,0 +1,114 @@
+/* Header geral */
+header {
+  width: 100%;
+  padding: 28px 8%;
+  box-sizing: border-box;
+}
+
+/* Navbar */
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* Logo */
+#nav_logo {
+  font-size: 1.25rem;
+  color: #7B2D9F;
+  cursor: pointer;
+}
+
+/* Lista de navegação (desktop) */
+#nav_list {
+  display: flex;
+  list-style: none;
+  gap: 48px;
+}
+
+/* Itens da navegação */
+.nav_item a {
+  text-decoration: none;
+  color: rgba(29, 29, 29, 0.85);
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav_item a:hover {
+  color: #1d1d1d;
+}
+
+/* Item ativo */
+.nav_item.active a {
+  color: #1d1d1d;
+  border-bottom: 3px solid #ffe100;
+  padding-bottom: 4px; /* dar espaço para o border não “grudar” no texto */
+}
+
+/* Botão de menu mobile (hamburger) escondido por padrão no desktop */
+#mobile_btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #1d1d1d;
+}
+
+/* Menu mobile (inicialmente escondido) */
+#mobile_menu {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  position: absolute;
+  top: 100%; /* aparece logo abaixo do header */
+  left: 0;
+  right: 0;
+  padding: 16px 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  z-index: 10;
+}
+
+/* Lista dentro do menu mobile */
+#mobile_nav_list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+#mobile_nav_list .nav_item {
+  text-align: center;
+}
+
+/* Media Query para telas menores / mobile */
+@media screen and (max-width: 1170px) {
+  /* Esconde navegação desktop + botão default quando for mobile */
+  #nav_list,
+  #navbar .btn-default {
+    display: none;
+  }
+
+  /* Exibe o botão de menu mobile (hamburger) */
+  #mobile_btn {
+    display: block;
+  }
+
+  /* Quando #mobile_menu tem a classe "active", mostramos ele */
+  #mobile_menu.active {
+    display: flex;
+  }
+}
+
+/* Opcional: para telas muito pequenas, ajustar padding do header */
+@media screen and (max-width: 450px) {
+  header {
+    padding: 16px 4%;
+  }
+
+  #nav_logo {
+    font-size: 1.1rem;
+  }
+}

@@ -1,0 +1,104 @@
+/* Seção #home agora sem imagem, centraliza tudo */
+#home {
+  display: flex;
+  flex-direction: column; /* vai empilhar a CTA verticalmente */
+  justify-content: center; /* centraliza verticalmente dentro de #home */
+  align-items: center;     /* centraliza horizontalmente */
+  min-height: calc(100vh - 91px);
+  position: relative;
+  padding: 0 16px; /* adiciona um pouco de padding nas laterais */
+}
+
+#cta {
+  width: 100%; /* ocupa toda a largura para centralizar bem */
+  max-width: 600px; /* limita para não ficar muito largo em telas grandes */
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  text-align: center; /* centraliza o texto dentro da CTA */
+  align-items: center; /* centraliza os botões e elementos internos */
+  margin-top: 0; /* tira o margin-top se já estamos centralizando verticalmente */
+  z-index: 2;
+}
+
+#cta .title {
+  font-size: 4rem;
+  color: #1d1d1d;
+}
+
+#cta .title span {
+  color: #e7dc0c;
+}
+
+#cta .description {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+/* Botões da CTA */
+#cta_buttons {
+  display: flex;
+  flex-direction: column; /* deixa os botões empilhados para centralizar melhor */
+  gap: 16px;
+  width: 100%;
+  align-items: center;
+}
+
+#cta_buttons a,
+#cta_buttons button {
+  text-decoration: none;
+  color: #1d1d1d;
+  width: auto;
+}
+
+/* Botão de telefone (CTA) */
+#phone_button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #ffffff;
+  padding: 8px 14px;
+  font-weight: 500;
+  box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+#phone_button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 0px 14px 5px rgba(0, 0, 0, 0.15);
+}
+
+/* Removemos o banner, então shape pode ser ajustada ou removida */
+/* Se quiser manter a shape decorativa, pode centralizar menos agressivamente */
+.shape {
+  display: none; /* esconde a shape agora, já que não tem imagem que precisa "fundo" */
+}
+
+/* Responsividade */
+@media screen and (max-width: 1170px) {
+  #home {
+    padding: 32px 16px;
+  }
+
+  #cta .title {
+    font-size: 3rem;
+  }
+
+  #cta .description {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  #phone_button {
+    padding: 6px 10px;
+    font-size: 0.9rem;
+  }
+
+  #phone_button i {
+    font-size: 1rem;
+  }
+}

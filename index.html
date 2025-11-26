@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vitamine-C | Sucos Naturais & Açaí</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav id="navbar">
+      <i class="fa-solid fa-seedling" id="nav_logo">Vitamine-C</i>
+      <ul id="nav_list">
+        <li class="nav_item active"><a href="#home">Início</a></li>
+        <li class="nav_item"><a href="#menu">Cardápio</a></li>
+        <li class="nav_item"><a href="#testimonials">Avaliações</a></li>
+        <li class="nav_item"><a href="#contact">Contato</a></li>
+      </ul>
+      <button class="btn-default" id="order_button">Peça aqui</button>
+      <button id="mobile_btn"><i class="fa-solid fa-bars"></i></button>
+    </nav>
+    <div id="mobile_menu">
+      <ul id="mobile_nav_list">
+        <li class="nav_item"><a href="#home">Início</a></li>
+        <li class="nav_item"><a href="#menu">Cardápio</a></li>
+        <li class="nav_item"><a href="#testimonials">Avaliações</a></li>
+        <li class="nav_item"><a href="#contact">Contato</a></li>
+      </ul>
+      <button class="btn-default" id="mobile_order_button">Peça aqui</button>
+    </div>
+  </header>
+
+  <main id="content">
+    <!-- Hero / Home -->
+    <section id="home" class="hero container-centro">
+      <div class="hero-content">
+        <h1 class="title">O sabor vai até <span>você</span></h1>
+        <p class="description">
+          Deliciosos sucos naturais e açaí preparados com carinho para você saborear
+        </p>
+        <div class="btn-wrapper">
+          <a href="#menu" class="btn-default">Ver cardápio</a>
+          <a href="tel:+5516992306803" class="btn-default phone-btn">
+            <i class="fa-solid fa-phone"></i> (16) 99230-6803
+          </a>
+        </div>
+        <div class="social-media">
+          <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cardápio -->
+    <section id="menu" class="menu section">
+      <h2 class="section-title">Cardápio</h2>
+      <h3 class="section-subtitle">Sucos especiais e açaí</h3>
+      <div class="dishes-grid">
+        <!-- Exemplo de prato -->
+        <div class="dish">
+          <div class="dish-heart"><i class="fa-solid fa-heart"></i></div>
+          <img src="./0309c4a6-8d9a-4aec-9f87-070c17b5887d.jpg" alt="Suco X">
+          <div class="dish-info">
+            <h4>Suco de Abacaxi</h4>
+            <p>Suco feito na hora.</p>
+            <span class="price">R$ 12,00</span>
+          </div>
+        </div>
+
+        <div class="dish">
+          <div class="dish-heart"><i class="fa-solid fa-heart"></i></div>
+          <img src="./8d8124e0-c68d-4c80-afa6-f3e77a1c2791.jpg" alt="Açaí Y">
+          <div class="dish-info">
+            <h4>Açaí na garrafa</h4>
+            <p>Descrição curta do açaí.</p>
+            <span class="price">R$ 18,00</span>
+          </div>
+        </div>
+
+        <!-- Adicione mais .dish conforme desejado -->
+      </div>
+    </section>
+
+    <!-- Avaliações -->
+    <section id="testimonials" class="section">
+      <h2 class="section-title">Avaliações</h2>
+      <div class="testimonial-cards">
+        <div class="testimonial">
+          <p>"Melhor suco que já provei!"</p>
+          <h4>- Cliente Feliz</h4>
+        </div>
+        <div class="testimonial">
+          <p>"Açaí super cremoso e fresco."</p>
+          <h4>- Outro Cliente</h4>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contact" class="section container-centro">
+      <h2 class="section-title">Contato</h2>
+      <p>Peça pelo WhatsApp ou ligue para nós:</p>
+      <a href="tel:+5516992306803" class="btn-default phone-btn">
+        <i class="fa-solid fa-phone"></i> (16) 99230-6803
+      </a>
+      <p>Endereço: Rua Javari, 3600, Ribeirão Preto, SP</p>
+      <form class="contact-form" action="#" method="post">
+        <label for="name">Nome</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Mensagem</label>
+        <textarea id="message" name="message" rows="4"></textarea>
+
+        <button type="submit" class="btn-default">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 Vitamine-C. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

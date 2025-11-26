@@ -1,0 +1,273 @@
+/* Definindo variáveis de cor */
+:root {
+  --cor-amarelo: #FDD82E;
+  --cor-roxa: #7B2D9F;
+  --cor-texto: #333333;
+  --cor-fundo-claro: #ffffffcc;
+}
+
+/* Import da fonte */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Reset e base global */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--cor-fundo-claro);
+  line-height: 1.5;
+  color: var(--cor-texto);
+}
+
+/* Seções gerais */
+section {
+  padding: 28px 8px;
+}
+
+/* Botão padrão */
+.btn-default {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--cor-amarelo);
+  border: none;
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-weight: 600;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+  color: var(--cor-roxa);
+}
+
+.btn-default:hover {
+  background-color: lighten(var(--cor-amarelo), 5%);
+  /* Se `lighten()` não funcionar (CSS puro não tem), você pode usar uma cor próxima manualmente */
+  box-shadow: 0 0 12px 4px rgba(0, 0, 0, 0.15);
+}
+
+/* Botão telefone (se for <a> com .btn-default) */
+.phone-btn {
+  gap: 6px;
+}
+
+/* Botões de redes sociais */
+.social-media-buttons {
+  display: flex;
+  gap: 18px;
+  margin-top: 16px;
+}
+
+.social-media-buttons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 40px;
+  background-color: var(--cor-roxa);
+  border-radius: 10px;
+  font-size: 1.25rem;
+  color: var(--cor-amarelo);
+  text-decoration: none;
+  box-shadow: 0 0 12px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.social-media-buttons a:hover {
+  box-shadow: 0 0 12px 8px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Header */
+header {
+  width: 100%;
+  padding: 16px 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#mobile_btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--cor-roxa);
+}
+
+#nav_list,
+#mobile_nav_list {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+}
+
+#mobile_nav_list {
+  flex-direction: column;
+  padding: 16px;
+}
+
+/* Seção Hero */
+.hero {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 500px;
+}
+
+/* Cardápio / menu de pratos */
+.dishes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+}
+
+.dish {
+  background: var(--cor-fundo-claro);
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.dish-heart {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  cursor: pointer;
+  color: var(--cor-roxa);
+  transition: transform 0.2s ease;
+}
+
+.dish-heart:hover {
+  transform: scale(1.2);
+}
+
+.dish img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.dish-info h4 {
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+  color: var(--cor-roxa);
+}
+
+.dish-info p {
+  font-size: 0.9rem;
+  margin-bottom: 12px;
+  color: var(--cor-texto);
+}
+
+.price {
+  font-weight: 700;
+  color: var(--cor-amarelo);
+}
+
+/* Testemunhos / avaliações */
+.testimonial-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+  margin-top: 16px;
+}
+
+.testimonial {
+  background: var(--cor-fundo-claro);
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.testimonial p {
+  font-style: italic;
+  margin-bottom: 8px;
+  color: var(--cor-texto);
+}
+
+.testimonial h4 {
+  text-align: right;
+  font-weight: 500;
+  color: var(--cor-roxa);
+}
+
+/* Contato */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 400px;
+  margin-top: 16px;
+}
+
+.contact-form label {
+  font-weight: 500;
+  color: var(--cor-roxa);
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 8px;
+  border: 1px solid var(--cor-roxa);
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+  resize: vertical;
+  color: var(--cor-texto);
+}
+
+.contact-form button {
+  align-self: flex-start;
+  background-color: var(--cor-roxa);
+  color: var(--cor-amarelo);
+  border: none;
+  padding: 10px 14px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: var(--cor-amarelo);
+  color: var(--cor-roxa);
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 16px 8px;
+  font-size: 0.9rem;
+  color: var(--cor-roxa);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.5;
+  color: var(--cor-texto);
+  /* fundo com gradiente roxo → amarelo */
+  background: linear-gradient(to bottom right, var(--cor-roxa), var(--cor-amarelo));
+  /* se quiser, garantir que o gradiente cubra tudo */
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* Se quiser um gradiente diferente só para a seção #menu, por exemplo */
+#menu {
+  background: linear-gradient(to right, var(--cor-roxa), var(--cor-amarelo));
+  color: var(--cor-texto-escuro-bg, #fff);
+}
